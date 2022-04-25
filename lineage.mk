@@ -10,7 +10,7 @@ TARGET_SCREEN_WIDTH := 240
 $(call inherit-product, vendor/cm/config/mini.mk)
 
 # Overrides
-PRODUCT_NAME := cm_totoro
+PRODUCT_NAME := lineage_totoro
 PRODUCT_DEVICE := totoro
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-S5360

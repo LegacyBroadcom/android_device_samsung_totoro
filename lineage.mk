@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Inherit device configuration for totoro
-$(call inherit-product, device/samsung/totoro/full_totoro.mk)
+$(call inherit-product, device/samsung/totoro/lineage_totoro.mk)
 
 # Inherit some common CM stuff.
 TARGET_SCREEN_HEIGHT := 320

@@ -23,7 +23,8 @@ jobs:
         mkdir ~/.jdk_7
         cd ~/.jdk_7
         axel -q -n $(nproc --all) https://repo.huaweicloud.com/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin
-        tar -xzf jdk-6u45-linux-x64.bin
+        chmod +x jdk-6u45-linux-x64.bin
+        ./jdk-6u45-linux-x64.bin
         sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
     - name: Syncing CyanogenMod sources
       run: |
@@ -31,7 +32,7 @@ jobs:
         cd ~/TWRP
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-        python3 ~/.bin/repo init --depth=1 -u https://github.com/CyanogenMod/android.git -b cm-11.0
+        python3 ~/.bin/repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-4.4-deprecated
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Syncing androidarmv6 sources
       run: |
@@ -39,10 +40,6 @@ jobs:
         git clone https://github.com/androidarmv6/android_device_samsung_bcm21553-common -b cm-11.0 ~/TWRP/device/samsung/bcm21553-common
         git clone https://github.com/androidarmv6/android_vendor_samsung -b cm-11.0 ~/TWRP/vendor/samsung
         git clone https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common -b cm-11.0 ~/TWRP/kernel/samsung/bcm21553-common
-        rm -rf ~/TWRP/system/core
-        rm -rf ~/TWRP/vendor/cm
-        git clone https://github.com/androidarmv6/android_vendor_cm -b cm-11.0 ~/TWRP/vendor/cm
-        git clone https://github.com/androidarmv6/android_system_core -b cm-11.0 ~/TWRP/system/core
         git clone https://github.com/androidarmv6/android_hardware_broadcom_brcm_usrlib -b cm-11.0 ~/TWRP/hardware/broadcom/brcm/usrlib
     - name: Building TWRP
       run: |

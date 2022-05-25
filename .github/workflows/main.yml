@@ -23,7 +23,7 @@ jobs:
         mkdir ~/.jdk_7
         cd ~/.jdk_7
         axel -q -n $(nproc --all) http://planetone.online/downloads/java/jdk-6u45-linux-x64.bin
-        tar -xzf ./jdk-6u45-linux-x64.bin
+        tar -xzf jdk-6u45-linux-x64.bin
         sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
     - name: Syncing CyanogenMod sources
       run: |

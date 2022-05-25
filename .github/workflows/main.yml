@@ -36,11 +36,11 @@ jobs:
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Syncing androidarmv6 sources
       run: |
-        git clone https://github.com/androidarmv6/android_device_samsung_totoro -b cm-11.0 ~/TWRP/device/samsung/totoro
+        git clone https://github.com/unlegacy-devices/android_device_samsung_totoro -b cm-11.0 ~/TWRP/device/samsung/totoro
         git clone https://github.com/androidarmv6/android_device_samsung_bcm21553-common -b cm-11.0 ~/TWRP/device/samsung/bcm21553-common
         git clone https://github.com/androidarmv6/android_vendor_samsung -b cm-11.0 ~/TWRP/vendor/samsung
         git clone https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common -b cm-11.0 ~/TWRP/kernel/samsung/bcm21553-common
-        git clone https://github.com/androidarmv6/android_hardware_broadcom_brcm_usrlib -b cm-11.0 ~/TWRP/hardware/broadcom/brcm/usrlib
+        git clone https://github.com/androidarmv6/android_hardware_broadcom_brcm_usrlib -b cm-11.0 ~/TWRP/hardware/broadcom/brcm_usrlib
     - name: Building TWRP
       run: |
         OLDPATH=$PATH

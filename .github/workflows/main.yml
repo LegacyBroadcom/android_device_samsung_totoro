@@ -1,4 +1,4 @@
-name: TWRP CI
+name: CyanogenMod Compiling CI
 
 on:
   workflow_dispatch:

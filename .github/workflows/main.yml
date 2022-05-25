@@ -22,7 +22,7 @@ jobs:
           libgl1-mesa-dev libxml2-utils xsltproc schedtool axel
         mkdir ~/.jdk_7
         cd ~/.jdk_7
-        axel -q -n $(nproc --all) http://planetone.online/downloads/java/jdk-6u45-linux-x64.bin
+        axel -q -n $(nproc --all) https://repo.huaweicloud.com/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin
         tar -xzf jdk-6u45-linux-x64.bin
         sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
     - name: Syncing CyanogenMod sources

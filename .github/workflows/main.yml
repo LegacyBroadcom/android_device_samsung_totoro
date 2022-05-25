@@ -36,7 +36,7 @@ jobs:
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Syncing androidarmv6 sources
       run: |
-        git clone https://github.com/unlegacy-devices/android_device_samsung_totoro -b cm-11.0 ~/TWRP/device/samsung/totoro
+        git clone https://github.com/androidarmv6/android_device_samsung_totoro -b cm-11.0 ~/TWRP/device/samsung/totoro
         git clone https://github.com/androidarmv6/android_device_samsung_bcm21553-common -b cm-11.0 ~/TWRP/device/samsung/bcm21553-common
         git clone https://github.com/androidarmv6/android_vendor_samsung -b cm-11.0 ~/TWRP/vendor/samsung
         git clone https://github.com/androidarmv6/android_kernel_samsung_bcm21553-common -b cm-11.0 ~/TWRP/kernel/samsung/bcm21553-common
@@ -52,7 +52,7 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         export LC_ALL=C
-        lunch cm_totoro-eng
+        lunch full_totoro-eng
         make -j$(nproc --all) recoveryimage
         export PATH=$OLDPATH
         export JAVA_HOME=$OLDJAVAHOME

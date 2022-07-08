@@ -18,5 +18,5 @@
 #
 
 ifeq (totoro,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cm_totoro.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/lineage_totoro.mk
 endif

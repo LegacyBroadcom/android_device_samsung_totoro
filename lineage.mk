@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Inherit device configuration for totoro
-$(call inherit-product, device/samsung/totoro/cm_totoro.mk)
+$(call inherit-product, device/samsung/totoro/lineage_totoro.mk)
 
 # Inherit some common CM stuff.
 TARGET_SCREEN_HEIGHT := 320
@@ -10,7 +10,7 @@ TARGET_SCREEN_WIDTH := 240
 $(call inherit-product, vendor/cm/config/mini.mk)
 
 # Overrides
-PRODUCT_NAME := cm_totoro
+PRODUCT_NAME := lineage_totoro
 PRODUCT_DEVICE := totoro
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-S5360

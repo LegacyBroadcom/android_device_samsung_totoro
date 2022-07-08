@@ -30,7 +30,7 @@ jobs:
         cd ~/TWRP
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-        python3 ~/.bin/repo init --depth=1 -u https://github.com/LineageOS-ARMv6/android.git -b cm-11.0
+        python3 ~/.bin/repo init --depth=1 -u https://github.com/TriDiscord/twrp_minimal_lineage.git -b cm-12.1
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Building TWRP
       run: |
